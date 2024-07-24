@@ -1,4 +1,5 @@
 # blog
 
 root@segfault.net
+
 curl -L https://www.cpolar.com/static/downloads/install-release-cpolar.sh | sudo bash
