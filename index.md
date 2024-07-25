@@ -28,3 +28,4 @@ plugin_user=
 plugin_passwd=
  #映射到共外网服务器的端口
 remote_port = 8000
+```
