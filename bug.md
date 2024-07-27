@@ -5,4 +5,8 @@
 ![image](https://github.com/user-attachments/assets/f08648dc-1d0b-4aff-8e47-c1bc3a779020)
 
 ## url
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/b9dec089-0442-4716-a628-82a6a790b408)
+
+
+wordlist
+.gitlab-ci.yml
