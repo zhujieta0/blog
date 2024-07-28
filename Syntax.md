@@ -1,6 +1,8 @@
 # GitHub Search Syntax for Finding API Keys/Secrets/Tokens
 As a security professional, it is important to conduct a thorough reconnaissance. With the increasing use of APIs nowadays, it has become paramount to keep access tokens and other API-related secrets secure in order to prevent leaks. However, despite technological advances, human error remains a factor, and many developers still unknowingly hardcode their API secrets into source code and commit them to public repositories. GitHub, being a widely popular platform for public code repositories, may inadvertently host such leaked secrets. To help identify these vulnerabilities, I have created a comprehensive search list using powerful search syntax that enables the search of thousands of leaked keys and secrets in a single search.
 
+https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax
+
 ## Search Syntax:
 
 ```(path:*.{File_extension1} OR path:*.{File_extension-N}) AND ({Keyname1} OR {Keyname-N}) AND (({Signature/pattern1} OR {Signature/pattern-N}) AND ({PlatformTag1} OR {PlatformTag-N}))```
