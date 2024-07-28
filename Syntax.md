@@ -44,6 +44,32 @@ Special thanks to [@fkulakov](https://gist.github.com/fkulakov) for the insightf
 
 ```(path:*.xml OR path:*.json OR path:*.properties OR path:*.sql OR path:*.txt OR path:*.log OR path:*.tmp OR path:*.backup OR path:*.bak OR path:*.enc OR path:*.yml OR path:*.yaml OR path:*.toml OR path:*.ini OR path:*.config OR path:*.conf OR path:*.cfg OR path:*.env OR path:*.envrc OR path:*.prod OR path:*.secret OR path:*.private OR path:*.key) AND (access_key OR secret_key OR access_token OR api_key OR apikey OR api_secret OR apiSecret OR app_secret OR application_key OR app_key OR appkey OR auth_token OR authsecret) AND (("shpss_" OR "shpat_" OR "shpca_" OR "shppa_") AND "Shopify")```
 
+**7. Other
+'''
+对于Stripe密钥：
+1/([srp]k_live_[0–9a-zA-Z]{24})/
+3/sk_live_[0–9a-zA-Z]{24}/
+
+对于 Slack
+1/https:\/\/hooks\.slack\.com\/services\/T[a-zA-Z0–9_]+\/B[a-zA-Z0–9_]+\/[a-zA-Z0–9_]+/
+
+域名搜索：
+1/https:\/\/[A-Za-z0–9-_]+\.dell\.com\/+/
+
+搜索密码：
+1/password=[A-Za-z0-9-_]+/
+
+示例中使用的密码搜索：
+1/:password=[A-Za-z0-9-_]+/ NOT example NOT guest NOT localhost NOT fake NOT 1234 NOT xxx NOT 127.0.0.1 NOT test
+
+查找IP范围：
+1/35\.21\.[0–9]{1,3}\.[0–9]{1,3}/
+
+我们还可以使用多个限定词或布尔运算符与正则表达式一起使用进行搜索。例如：
+1/:password=[A-Za-z0–9-_]+/ NOT example NOT guest NOT localhost NOT fake NOT 1234 NOT xxx NOT 127.0.0.1 NOT test traget.com
+3/access_token=[A-Za-z0–9-_]+/ NOT example NOT guest NOT localhost NOT fake NOT 1234
+'''
+
 ## Parameters Used
 
 ### File Extensions
@@ -99,3 +125,6 @@ Special thanks to [@fkulakov](https://gist.github.com/fkulakov) for the insightf
 - Online IDE Search: https://redhuntlabs.com/online-ide-search/
 - Keyhacks on GitHub: https://github.com/streaak/keyhacks
 - Google Hacking Database: https://www.exploit-db.com/google-hacking-database
+- https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax#using-regular-expressions
+-https://www.sshell.co/github-code-search
+-https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax
